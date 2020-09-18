@@ -1,6 +1,3 @@
-// class Check{
-
-// }
 let str = "password";
 
 function check() {
