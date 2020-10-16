@@ -6,9 +6,8 @@ class Stack {
 
   push(data) {
     let size = ++this.size;
-    size <= 100
-      ? (this.storage[size] = data)
-      : console.log("Ошибка, больше 100 элементов в стэке быть не может");
+    size <= 100 ? (this.storage[size] = data) : this.size--;
+    console.log("Ошибка, больше 100 элементов в стэке быть не может");
   }
 
   pop() {
@@ -38,16 +37,13 @@ class Stack {
 }
 
 let stack = new Stack();
-stack.push(233), stack.push([1, 2, 3]);
-stack.push({ name: "Sergey" });
-console.log(stack);
-stack.pop();
-console.log(stack);
+// stack.push(233), stack.push([1, 2, 3]); //добавить в стек
+// stack.push({ name: "Sergey" });
+// stack.pop(); //удалить из стека
+// console.log(stack); //вывод
+// console.log("Последний элемент стека: ", stack.back()); // Вывод последнего элемента стека
 
-// stack.clear();
-console.log(stack.back());
-
-// for (let i = 0; i < 200; i++) {
-//   stack.push(i);
-// }
-// console.log(stack);
+for (let i = 0; i < 101; i++) {
+  stack.push(i);
+}
+console.log(stack);

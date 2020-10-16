@@ -9,7 +9,7 @@ function game() {
   if (player1[0] === 0 && player2[0] === 9) {
     player1.push(player2.shift());
     player1.push(player1.shift());
-  } else if (player1[0] === 9 && player2[0] === 0) { 
+  } else if (player1[0] === 9 && player2[0] === 0) {
     player2.push(player1.shift());
     player2.push(player2.shift());
   } else if (player1[0] > player2[0]) {
@@ -24,7 +24,6 @@ function game() {
 //процесс игры
 for (let i = 0; i <= 10 ** 6; i++) {
   if (player1.length === 0 || player2.length === 0) {
-    console.log("break working");
     break;
   } else if (i === 10 ** 6) {
     console.log("to long...");
@@ -35,10 +34,8 @@ for (let i = 0; i <= 10 ** 6; i++) {
 
 //определяем победителя
 if (player2.length === 0) {
-  console.log("player1 wined!");
+  console.log("first");
 } else {
-  console.log("player2 wined!");
+  console.log("second");
 }
 
-console.log("player1", player1);
-console.log("player2", player2);

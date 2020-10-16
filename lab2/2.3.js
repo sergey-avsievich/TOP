@@ -8,8 +8,6 @@ function readFile(object) {
   let file = object.files[0];
   let reader = new FileReader();
   reader.onload = function () {
-    document.getElementById("out").innerHTML = reader.result;
-
     //разбиваем массив, получаем должность, время и приоритет в отдельный массив
     data = reader.result.split("\n").join(", ").split(", ");
 

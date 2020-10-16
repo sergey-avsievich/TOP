@@ -41,9 +41,8 @@ class Dack {
 
       delete this.storage[size];
       this.size--;
-      
+
       return deletedData;
-    
     } else {
       console.log("error");
     }
@@ -61,7 +60,6 @@ class Dack {
       this.size--;
 
       return deletedData;
-    
     } else {
       console.log("error");
     }
@@ -82,19 +80,12 @@ class Dack {
 }
 
 let dack = new Dack();
-dack.push_back(1), dack.push_back(2);
+dack.push_back(1), dack.push_back(2); //Добавить элемент в конец
 dack.push_back(3);
-// console.log(dack);
-
-// dack.clear();
-// console.log(dack.push_front());
-
-// for (let i = 1; i <= 101; i++) {
-//   dack.push_front(i);
-// }
-dack.pop_front();
+dack.pop_front(); //удалить элемент в конце
+dack.push_front("newElement"); // положить в начало
+dack.push_front("удалим его"); // положить в начало
+dack.pop_front(); //удалить в начале
 console.log(dack);
-dack.push_front("newElement");
-console.log(dack);
-dack.pop_front();
-console.log(dack);
+console.log("первый элемент: ", dack.front()); //вывод первого элемента
+console.log("последний элемент: ", dack.back()); //вывод последнего элемента
